@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="400" fill="#fafafa"/>
+  <text x="400" y="28" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">Cost-per-Success Across Methods</text>
+
+  <!-- ===== LEFT: ToolBench ===== -->
+  <text x="200" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">ToolBench (m=8)</text>
+  <line x1="40" y1="320" x2="360" y2="320" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="40" y1="80" x2="40" y2="320" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="36" y="84" text-anchor="end" font-size="9" fill="#94a3b8">130</text>
+  <text x="36" y="320" text-anchor="end" font-size="9" fill="#94a3b8">0</text>
+
+  <!-- bars: x start 55, width 30, step 42 -->
+  <!-- Random 118.23 -->
+  <rect x="55" y="120" width="30" height="200" fill="#94a3b8"/>
+  <text x="70" y="113" text-anchor="middle" font-size="9" fill="#1e293b">118.2</text>
+  <text x="70" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">Random</text>
+
+  <!-- CapabilityMatch 218.25 (off scale) -->
+  <rect x="97" y="80" width="30" height="240" fill="#cbd5e1"/>
+  <path d="M97,80 l6,6 l-6,6 l6,6 l-6,6 l6,6 l-6,6 l6,4" fill="none" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="112" y="73" text-anchor="middle" font-size="9" fill="#1e293b">218.3</text>
+  <text x="112" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">Capability</text>
+  <text x="112" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">Match</text>
+
+  <!-- RuleBased 36.43 -->
+  <rect x="139" y="258" width="30" height="62" fill="#94a3b8"/>
+  <text x="154" y="251" text-anchor="middle" font-size="9" fill="#1e293b">36.4</text>
+  <text x="154" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">Rule</text>
+  <text x="154" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">Based</text>
+
+  <!-- CostOpt-Oracle 69.13 -->
+  <rect x="181" y="203" width="30" height="117" fill="#94a3b8"/>
+  <text x="196" y="196" text-anchor="middle" font-size="9" fill="#1e293b">69.1</text>
+  <text x="196" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">CostOpt</text>
+  <text x="196" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">Oracle</text>
+
+  <!-- LoRA supervised 67.51 -->
+  <rect x="223" y="206" width="30" height="114" fill="#94a3b8"/>
+  <text x="238" y="199" text-anchor="middle" font-size="9" fill="#1e293b">67.5</text>
+  <text x="238" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">LoRA</text>
+  <text x="238" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">(sup.)</text>
+
+  <!-- PPO 24.30 -->
+  <rect x="265" y="279" width="30" height="41" fill="#94a3b8"/>
+  <text x="280" y="272" text-anchor="middle" font-size="9" fill="#1e293b">24.3</text>
+  <text x="280" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">PPO</text>
+
+  <!-- LoRA-Guided PPO 21.40 (highlighted) -->
+  <rect x="307" y="284" width="30" height="36" fill="#4f46e5"/>
+  <text x="322" y="277" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4f46e5">21.4</text>
+  <text x="322" y="335" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4f46e5">LoRA-Guided</text>
+  <text x="322" y="345" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4f46e5">PPO</text>
+
+  <!-- ===== RIGHT: FlightPlanner ===== -->
+  <text x="600" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">FlightPlanner (synthetic)</text>
+  <line x1="440" y1="320" x2="760" y2="320" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="440" y1="80" x2="440" y2="320" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="436" y="84" text-anchor="end" font-size="9" fill="#94a3b8">25</text>
+  <text x="436" y="320" text-anchor="end" font-size="9" fill="#94a3b8">0</text>
+
+  <!-- Random 57.88 (off scale) -->
+  <rect x="455" y="80" width="30" height="240" fill="#cbd5e1"/>
+  <path d="M455,80 l6,6 l-6,6 l6,6 l-6,6 l6,6 l-6,6 l6,4" fill="none" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="470" y="73" text-anchor="middle" font-size="9" fill="#1e293b">57.9</text>
+  <text x="470" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">Random</text>
+
+  <!-- CapabilityMatch 960.90 (off scale) -->
+  <rect x="497" y="80" width="30" height="240" fill="#cbd5e1"/>
+  <path d="M497,80 l6,6 l-6,6 l6,6 l-6,6 l6,6 l-6,6 l6,4" fill="none" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="512" y="73" text-anchor="middle" font-size="9" fill="#1e293b">960.9</text>
+  <text x="512" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">Capability</text>
+  <text x="512" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">Match</text>
+
+  <!-- RuleBased 10.58 -->
+  <rect x="539" y="227" width="30" height="93" fill="#94a3b8"/>
+  <text x="554" y="220" text-anchor="middle" font-size="9" fill="#1e293b">10.6</text>
+  <text x="554" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">Rule</text>
+  <text x="554" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">Based</text>
+
+  <!-- CostOpt-Oracle 660.50 (off scale) -->
+  <rect x="581" y="80" width="30" height="240" fill="#cbd5e1"/>
+  <path d="M581,80 l6,6 l-6,6 l6,6 l-6,6 l6,6 l-6,6 l6,4" fill="none" stroke="#fafafa" stroke-width="1.5"/>
+  <text x="596" y="73" text-anchor="middle" font-size="9" fill="#1e293b">660.5</text>
+  <text x="596" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">CostOpt</text>
+  <text x="596" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">Oracle</text>
+
+  <!-- LoRA supervised 11.70 -->
+  <rect x="623" y="217" width="30" height="103" fill="#94a3b8"/>
+  <text x="638" y="210" text-anchor="middle" font-size="9" fill="#1e293b">11.7</text>
+  <text x="638" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">LoRA</text>
+  <text x="638" y="345" text-anchor="middle" font-size="8.5" fill="#64748b">(sup.)</text>
+
+  <!-- PPO 15.23 -->
+  <rect x="665" y="186" width="30" height="134" fill="#94a3b8"/>
+  <text x="680" y="179" text-anchor="middle" font-size="9" fill="#1e293b">15.2</text>
+  <text x="680" y="335" text-anchor="middle" font-size="8.5" fill="#64748b">PPO</text>
+
+  <!-- LoRA-Guided PPO 7.71 (highlighted) -->
+  <rect x="707" y="252" width="30" height="68" fill="#4f46e5"/>
+  <text x="722" y="245" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4f46e5">7.71</text>
+  <text x="722" y="335" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4f46e5">LoRA-Guided</text>
+  <text x="722" y="345" text-anchor="middle" font-size="8.5" font-weight="700" fill="#4f46e5">PPO</text>
+
+  <!-- caption -->
+  <text x="400" y="372" text-anchor="middle" font-size="10.5" fill="#64748b" font-style="italic">CPS (Cost-per-Success) — lower is better ↓ · as reported in the paper</text>
+  <text x="400" y="388" text-anchor="middle" font-size="9.5" fill="#94a3b8" font-style="italic">Zig-zag bars are off-scale outliers — exact value labeled above each</text>
+</svg>

@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you reference this work, please cite it as below."
+type: article
+title: "LoRA-Guided PPO for Cost-Aware and Compute-Efficient Agent Orchestration"
+authors:
+  - family-names: Durai
+    given-names: Aneesh
+    affiliation: "Columbia University"
+  - family-names: Hu
+    given-names: "Joshua Cong"
+    affiliation: "University of Toronto"
+  - family-names: Buch
+    given-names: Kevaan
+    affiliation: "University of Toronto"
+  - family-names: Zhu
+    given-names: Kevin
+    affiliation: "Algoverse AI Research"
+  - family-names: Sharma
+    given-names: Vasu
+    affiliation: "FAIR at Meta"
+  - family-names: Balwani
+    given-names: Aishwarya
+    affiliation: "St. Jude Children's Research Hospital"
+year: 2025
+collection-title: "39th Conference on Neural Information Processing Systems (NeurIPS 2025) Workshop: Efficient Reasoning"
+url: "https://neurips.cc/virtual/2025/loc/san-diego/126604"
+repository-code: "https://github.com/JoshuaCongHu/lora-guided-ppo-neurips2025"
+license: MIT
+keywords:
+  - reinforcement-learning
+  - lora
+  - ppo
+  - multi-agent
+  - llm-agents
+  - efficient-reasoning
+  - cost-aware
+  - agent-orchestration

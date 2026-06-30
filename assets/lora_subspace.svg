@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="300" fill="#fafafa"/>
+  <text x="400" y="28" text-anchor="middle" font-size="17" font-weight="700" fill="#1e293b">LoRA Subspace Constraint: Stable, Efficient RL</text>
+
+  <!-- Left: Standard PPO -->
+  <text x="200" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Standard PPO</text>
+  <text x="200" y="74" text-anchor="middle" font-size="10.5" fill="#64748b">(all parameters updated)</text>
+
+  <rect x="110" y="90" width="180" height="110" rx="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="200" y="150" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">W ∈ ℝ^(d×k)</text>
+
+  <!-- gradient arrows into all of W -->
+  <g stroke="#dc2626" stroke-width="1.3" marker-end="url(#arrowRed)">
+    <line x1="130" y1="218" x2="135" y2="198"/>
+    <line x1="160" y1="218" x2="160" y2="198"/>
+    <line x1="190" y1="218" x2="185" y2="198"/>
+    <line x1="220" y1="218" x2="215" y2="198"/>
+    <line x1="250" y1="218" x2="245" y2="198"/>
+    <line x1="270" y1="218" x2="265" y2="198"/>
+  </g>
+  <text x="200" y="232" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="600">∇ flows into every weight</text>
+  <text x="200" y="258" text-anchor="middle" font-size="11" fill="#64748b">Full backprop →</text>
+  <text x="200" y="274" text-anchor="middle" font-size="11" fill="#64748b">expensive, unstable</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="50" x2="400" y2="280" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <circle cx="400" cy="165" r="16" fill="#fafafa" stroke="#e2e8f0"/>
+  <text x="400" y="170" text-anchor="middle" font-size="11" fill="#94a3b8" font-weight="700">vs</text>
+
+  <!-- Right: LoRA-Guided PPO -->
+  <text x="600" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="#4f46e5">LoRA-Guided PPO</text>
+  <text x="600" y="74" text-anchor="middle" font-size="10.5" fill="#64748b">(updates confined to adapter)</text>
+
+  <rect x="510" y="90" width="180" height="60" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="600" y="116" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">W (frozen)</text>
+  <text x="600" y="134" text-anchor="middle" font-size="14" fill="#475569">🔒</text>
+
+  <!-- A and B matrices -->
+  <rect x="510" y="162" width="80" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="550" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#4f46e5">A (rank r)</text>
+
+  <text x="598" y="186" text-anchor="middle" font-size="14" fill="#1e293b">·</text>
+
+  <rect x="610" y="162" width="80" height="38" rx="6" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <text x="650" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#4f46e5">B (rank r)</text>
+
+  <text x="600" y="214" text-anchor="middle" font-size="10" fill="#1e293b">ΔW = A · B</text>
+
+  <!-- gradient arrows only into A,B -->
+  <g stroke="#4f46e5" stroke-width="1.3" marker-end="url(#arrowAccent2)">
+    <line x1="550" y1="232" x2="550" y2="204"/>
+    <line x1="650" y1="232" x2="650" y2="204"/>
+  </g>
+  <text x="600" y="246" text-anchor="middle" font-size="10" fill="#4f46e5" font-weight="600">∇ flows only into A, B</text>
+
+  <text x="600" y="266" text-anchor="middle" font-size="11" fill="#64748b">Only A, B update →</text>
+  <text x="600" y="282" text-anchor="middle" font-size="11" font-weight="600" fill="#1e293b">stable, efficient, thrifty</text>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="7" markerHeight="7" refX="3.5" refY="2.5" orient="auto">
+      <path d="M0,5 L3.5,0 L7,5 Z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowAccent2" markerWidth="7" markerHeight="7" refX="3.5" refY="2.5" orient="auto">
+      <path d="M0,5 L3.5,0 L7,5 Z" fill="#4f46e5"/>
+    </marker>
+  </defs>
+</svg>
